@@ -1,0 +1,92 @@
+.sidebar {
+    width: 250px;
+    height: calc(100% - 60px); /* Höhe der Sidebar abzüglich der Header-Höhe */
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 60px; /* Startet direkt unterhalb des Headers */
+    left: -250px; /* Versteckt die Sidebar standardmäßig */
+    transition: left 0.3s;
+    z-index: 1001; /* Höher als der Header, damit sie darüber liegt */
+  }
+  
+  .sidebar.active {
+    left: 0; /* Zeigt die Sidebar an */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+    text-align: left; /* Links ausgerichtet */
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px; /* Erhöhtes Padding für mehr Fläche */
+    margin: 0 -20px; /* Erweitert die Hintergrundfarbe links und rechts */
+    border-radius: 5px; /* Abgerundete Ecken für den Hover-Hintergrund */
+  }
+  
+  .sidebar ul li a i {
+    margin-right: 15px; /* Erhöht den Abstand zwischen Icon und Text */
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #444; /* Hellerer Hintergrund beim Hover */
+    color: white; /* Stellt sicher, dass die Schriftfarbe unverändert bleibt */
+  }
+  
+  .sidebar ul li a.active {
+    background-color: #444; /* Hellerer Hintergrund beim Klick */
+    color: white; /* Stellt sicher, dass die Schriftfarbe unverändert bleibt */
+  }
+  
+  /* Media Queries für responsive Design */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 200px; /* Kleinere Sidebar-Breite für kleinere Bildschirme */
+      left: -200px; /* Versteckt die Sidebar standardmäßig */
+    }
+  
+    .sidebar.active {
+      left: 0; /* Zeigt die Sidebar an */
+    }
+  
+    .content {
+      margin-left: 200px; /* Platz für die Sidebar, falls sie aktiv ist */
+      padding-top: 70px; /* Platz für den Header */
+      padding-bottom: 50px; /* Platz für den Footer */
+    }
+  
+    .sidebar + .content {
+      margin-left: 0; /* Verschiebt den Inhalt, wenn die Sidebar geschlossen ist */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 150px; /* Noch kleinere Sidebar-Breite für sehr kleine Bildschirme */
+      left: -150px; /* Versteckt die Sidebar standardmäßig */
+    }
+  
+    .sidebar.active {
+      left: 0; /* Zeigt die Sidebar an */
+    }
+  
+    .content {
+      margin-left: 150px; /* Platz für die Sidebar, falls sie aktiv ist */
+      padding-top: 70px; /* Platz für den Header */
+      padding-bottom: 50px; /* Platz für den Footer */
+    }
+  
+    .sidebar + .content {
+      margin-left: 0; /* Verschiebt den Inhalt, wenn die Sidebar geschlossen ist */
+    }
+  }

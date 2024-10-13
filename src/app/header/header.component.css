@@ -1,0 +1,63 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Damit der Header immer oben bleibt */
+    height: 60px; /* Höhe des Headers */
+  }
+  
+  .menu-icon {
+    position: absolute;
+    left: 20px; /* Positioniert das Burgermenü am linken Rand */
+    cursor: pointer;
+    padding: 10px 15px; /* Größeres Padding für ein größeres Burgermenü */
+    font-size: 1.5em; /* Vergrößert das Burgermenü */
+    border-radius: 5px; /* Abgerundete Ecken für den Hover-Hintergrund */
+  }
+  
+  .menu-icon:hover {
+    background-color: #444; /* Hellerer Hintergrund beim Hover */
+    color: white; /* Stellt sicher, dass die Schriftfarbe unverändert bleibt */
+  }
+  
+  .title {
+    font-size: 1.5em;
+  }
+  
+  .title a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px; /* Padding hinzufügen für den Hover-Effekt */
+    border-radius: 5px; /* Abgerundete Ecken für den Hover-Hintergrund */
+  }
+  
+  .title a:hover {
+    background-color: #444; /* Hellerer Hintergrund beim Hover */
+    color: white; /* Stellt sicher, dass die Schriftfarbe unverändert bleibt */
+  }
+  
+  /* Media Queries für responsive Design */
+  @media (max-width: 768px) {
+    header {
+      padding: 10px 5px; /* Weniger Padding für kleinere Bildschirme */
+    }
+  
+    .title {
+      font-size: 1.2em; /* Kleinere Schriftgröße für kleinere Bildschirme */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header {
+      padding: 10px 2px; /* Noch weniger Padding für sehr kleine Bildschirme */
+    }
+  
+    .title {
+      font-size: 1em; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+    }
+  }

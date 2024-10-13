@@ -1,0 +1,36 @@
+.content {
+    margin-left: 250px; /* Platz für die Sidebar, falls sie aktiv ist */
+    padding: 10px;
+    padding-top: 70px; /* Platz für den Header */
+    padding-bottom: 50px; /* Platz für den Footer */
+    transition: margin-left 0.3s;
+  }
+  
+  .sidebar + .content {
+    margin-left: 0; /* Verschiebt den Inhalt, wenn die Sidebar geschlossen ist */
+  }
+  
+  /* Media Queries für responsive Design */
+  @media (max-width: 768px) {
+    .content {
+      margin-left: 200px; /* Platz für die Sidebar, falls sie aktiv ist */
+      padding-top: 70px; /* Platz für den Header */
+      padding-bottom: 50px; /* Platz für den Footer */
+    }
+  
+    .sidebar + .content {
+      margin-left: 0; /* Verschiebt den Inhalt, wenn die Sidebar geschlossen ist */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .content {
+      margin-left: 150px; /* Platz für die Sidebar, falls sie aktiv ist */
+      padding-top: 70px; /* Platz für den Header */
+      padding-bottom: 50px; /* Platz für den Footer */
+    }
+  
+    .sidebar + .content {
+      margin-left: 0; /* Verschiebt den Inhalt, wenn die Sidebar geschlossen ist */
+    }
+  }
